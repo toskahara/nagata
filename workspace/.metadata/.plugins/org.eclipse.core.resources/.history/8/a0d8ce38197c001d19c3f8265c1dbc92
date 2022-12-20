@@ -1,0 +1,18 @@
+import javax.swing.JFrame;
+
+public class GraphicsExample extends JFrame {
+	public static void main(String[] args) {
+		new GraphicsExample();
+	//	new paintComponent(Graphics g);
+	}
+
+	GraphicsExample() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		getContentPane().add(new MyPanel());
+		setSize(300, 200);
+		setVisible(true);
+	}
+	
+
+}
+

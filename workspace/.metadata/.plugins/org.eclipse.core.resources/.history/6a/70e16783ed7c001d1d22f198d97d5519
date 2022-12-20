@@ -1,0 +1,65 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+class MyPanel extends JPanel
+	implements MouseListener, MouseMotionListener {
+	
+	int ox,oy;
+
+	public MyPanel() {
+		addMouseListener(this);
+		addMouseMotionListener(this);
+		setBackground(Color.WHITE);
+	}
+
+	public void mouseClicked(MouseEvent e) {
+		Graphics g = getGraphics();
+		g.setColor(new Color(
+			(int)(Math.random()*256),
+			(int)(Math.random()*256),
+			(int)(Math.random()*256)));
+		g.fillRect(e.getX() - 5, e.getY() - 5, 10, 10);
+	}
+
+	public void mouseDragged(MouseEvent e) {
+		Graphics g = getGraphics();
+		g.setColor(Color.BLACK);
+		g.fillOval(e.getX() - 2, e.getY() - 2, 5, 5);
+
+	}
+
+	public void mouseEntered(MouseEvent e) {}
+	public void mouseExited(MouseEvent e) {}
+	public void mousePressed(MouseEvent e) {}
+	public void mouseReleased(MouseEvent e) {}
+	public void mouseMoved(MouseEvent e) {
+		Graphics g = getGraphics();
+		g.setColor(Color.WHITE);
+
+		g.fillRect(ox - 5, oy - 5, 10, 10);
+		g.setColor(Color.BLACK);
+		g.fillRect(e.getX() - 5, e.getY() - 5, 10, 10);
+		ox = e.getX();
+		oy = e.getY();
+			
+	}
+}
+
+public class SimpleDraw extends JFrame {
+	public static void main(String[] args) {
+		new SimpleDraw();
+	}
+
+	SimpleDraw() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		getContentPane().add(new MyPanel());
+		setSize(600, 400);
+		setVisible(true);
+	}
+}

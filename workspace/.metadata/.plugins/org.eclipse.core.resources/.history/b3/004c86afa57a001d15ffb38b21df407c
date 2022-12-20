@@ -1,0 +1,56 @@
+./python.exe ./get-pip.py
+
+
+  Downloading pip-22.3.1-py3-none-any.whl (2.1 MB)
+     |████████████████████████████████| 2.1 MB 2.2 MB/s
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 21.3.1
+    Uninstalling pip-21.3.1:
+      Successfully uninstalled pip-21.3.1
+  WARNING: The scripts pip.exe, pip3.10.exe, pip3.9.exe and pip3.exe are installed in 'C:\ec\pleiades-2021-12-ultimate-win-64bit-jre_20220106\pleiades\python\3\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+ERROR: Could not install packages due to an OSError: [WinError 32] プロセスはファイルにアクセスできません。別のプロセス が使用中です。: 'C:\\ec\\pleiades-2021-12-ultimate-win-64bit-jre_20220106\\pleiades\\python\\3\\Lib\\site-packages\\~ip\\_vendor\\pep517\\in_process\\_in_process.py'
+Consider using the `--user` option or check the permissions.
+
+PS C:\ec\pleiades-2021-12-ultimate-win-64bit-jre_20220106\pleiades\python\3>
+
+
+
+
+
+import java.awt.event.*;
+import javax.swing.*;
+import java.awt.*;
+
+public class TextFieldExample extends JFrame implements ActionListener {
+	
+	public static void main(String[] args) {
+		new TextFieldExample(); 
+	}
+	
+	JTextField textField = new JTextField(20);
+	JButton clearButton = new JButton("リセット");
+	JButton OKButton = new JButton("OK");
+	
+	TextFieldExample() {
+		getContentPane().setLayout(new FlowLayout());		
+		getContentPane().add(textField);
+		getContentPane().add(clearButton);
+		getContentPane().add(OKButton);
+		clearButton.addActionListener(this);
+		OKButton.addActionListener(this);		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(300, 100);
+		setVisible(true);
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource() == clearButton) {
+			textField.setText("");
+		} else if(e.getSource() == OKButton) {
+			System.out.println("値は[" + textField.getText() + "]です");
+		}
+	}
+}
+

@@ -1,0 +1,1 @@
+print(1+2)print(3+4)print(4+5) import sysprint('Major version: {}'.format(sys.version_info.major))  # => 3print('Minor version: {}'.format(sys.version_info.minor))  # => 6print('Micro version: {}'.format(sys.version_info.micro))  # => 1
