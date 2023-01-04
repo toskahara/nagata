@@ -1,0 +1,94 @@
+create database ed106 DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+create table 入力データ (
+得CO int(3), 
+社員名 char(20), 
+出発日 date,
+帰着日 date,
+区分 int,
+契約額 int(16)
+) 
+default charset=utf8;
+
+
+create table 日当テーブル (
+区分 int , 
+日当 int(8)
+) 
+default charset=utf8;
+
+
+
+INSERT INTO 入力データ  values (101,"名前１", "22-9-1", "22-9-9", 1, 3578600);
+INSERT INTO 入力データ  values (102,"名前２", "22-9-5", "22-9-16", 4, 3926100);
+INSERT INTO 入力データ  values (103,"名前３", "22-9-7", "22-9-14", 2, 3578600);
+INSERT INTO 入力データ  values (104,"名前４", "22-9-10", "22-9-16", 3, 3578600);
+INSERT INTO 入力データ  values (105,"名前５", "22-9-11", "22-9-21", 2, 3578600);
+INSERT INTO 入力データ  values (106,"名前６", "22-9-13", "22-9-22", 3, 3816);
+INSERT INTO 入力データ  values (107,"名前７", "22-9-15", "22-9-20", 1, 3271800);
+INSERT INTO 入力データ  values (108,"名前８", "22-9-16", "22-9-28", 4, 4326200);
+INSERT INTO 入力データ  values (108,"名前８", "22-9-16", "22-10-2", 4, 4326200);
+
+
+INSERT INTO 日当テーブル  values (1,  6870);
+INSERT INTO 日当テーブル  values (2,  6340);
+INSERT INTO 日当テーブル  values (3,  5980);
+INSERT INTO 日当テーブル  values (4,  5420);
+
+
+
+SELECT DATEDIFF(帰着日,出発日)+1 as 期間, (DATEDIFF(帰着日,出発日)+1)* 日当 as 日当 FROM `入力データ` n ,日当テーブル t WHERE n.区分 = t.区分
+ 
+SELECT DATEDIFF(帰着日,出発日)+1 as 期間, (DATEDIFF(帰着日,出発日)+1)* 日当 as 日当, if ((DATEDIFF(帰着日,出発日)+1)>=10), 
+(DATEDIFF(帰着日,出発日)+1)* 日当*1.2 as 出張手当 FROM `入力データ` n ,日当テーブル t WHERE n.区分 = t.区分
+
+SELECT
+    DATEDIFF(帰着日, 出発日) +1 AS 期間,
+    (DATEDIFF(帰着日, 出発日) +1) * 日当 AS 日当,
+    IF((DATEDIFF(帰着日, 出発日) +1) >= 10),
+    (DATEDIFF(帰着日, 出発日) +1) * 日当 * 1.2, (DATEDIFF(帰着日, 出発日) +1) * 日当 AS 日当
+FROM
+    `入力データ` n,
+    日当テーブル t
+WHERE
+    n.区分 = t.区分
+
+SELECT
+    DATEDIFF(帰着日, 出発日) +1 AS 期間,
+    IF((DATEDIFF(帰着日, 出発日) +1) >= 10,
+    (DATEDIFF(帰着日, 出発日) +1) * 日当 * 1.2, (DATEDIFF(帰着日, 出発日) +1) * 日当 ) AS 出張日当
+    契約額 * 0.026 as 営業手当
+FROM
+    `入力データ` n,
+    日当テーブル t
+WHERE
+    n.区分 = t.区分
+ 
+
+
+create view keisiki2 as
+SELECT
+    DATEDIFF(帰着日, 出発日) +1 AS 期間,
+    IF((DATEDIFF(帰着日, 出発日) +1) >= 10,
+    (DATEDIFF(帰着日, 出発日) +1) * 日当 * 1.2, (DATEDIFF(帰着日, 出発日) +1) * 日当 ) AS 出張日当,
+    契約額 * 0.026 as 営業手当
+FROM
+    `入力データ` n,
+    日当テーブル t
+WHERE
+    n.区分 = t.区分
+
+SELECT
+    DATEDIFF(帰着日, 出発日) +1 AS 期間,
+    IF((DATEDIFF(帰着日, 出発日) +1) >= 10,
+    (DATEDIFF(帰着日, 出発日) +1) * 日当 * 1.2, (DATEDIFF(帰着日, 出発日) +1) * 日当 ) AS 出張日当,
+    契約額 * 0.026 as 営業手当
+    if (IF((DATEDIFF(帰着日, 出発日) +1) <= 12 and 
+     if (DATEDIFF(帰着日, 出発日) +1) * 日当 * 1.2, (DATEDIFF(帰着日, 出発日) +1) * 日当 )
+  ......................................
+
+FROM
+    `入力データ` n,
+    日当テーブル t
+WHERE
+    n.区分 = t.区分

@@ -1,0 +1,53 @@
+create database ed105 DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+create table 入力データ (
+得CO int(3), 
+得意先名 char(20), 
+商CO char(2) ,
+数量 int(8)
+) 
+default charset=utf8;
+
+create table 商品テーブル (
+商CO char(2) ,
+商品名 char(20), 
+定価 int(8)
+) 
+default charset=utf8;
+
+create table 増量率表 (
+数量 char(2) ,
+増量率 char(20), 
+定価 int(8)
+) 
+default charset=utf8;
+
+INSERT INTO 入力データ  values (101,"山田衣料", 12, 351);
+INSERT INTO 入力データ  values (102,"Aスタイル", 14, 408);
+INSERT INTO 入力データ  values (103,"ヤマヨ商店", 11, 492);
+INSERT INTO 入力データ  values (104,"長島商会", 14, 395);
+INSERT INTO 入力データ  values (105,"MAS総業", 13, 421);
+INSERT INTO 入力データ  values (106,"南山商店", 13, 450);
+INSERT INTO 入力データ  values (107,"佐々木商会", 13, 508);
+INSERT INTO 入力データ  values (108,"泉ストア", 13, 516);
+INSERT INTO 入力データ  values (109,"スマイル堂", 13, 384);
+
+INSERT INTO 商品テーブル  values (11, "A商品", 1790);
+INSERT INTO 商品テーブル  values (12, "B商品", 1510);
+INSERT INTO 商品テーブル  values (13, "C商品", 1620);
+INSERT INTO 商品テーブル  values (14, "D商品", 1450);
+INSERT INTO 商品テーブル  values (15, "E商品", 1380);
+
+
+SELECT 得CO, 得意先名, n.商co, 商品名
+from
+ 入力データ n,
+ 商品テーブル s
+WHERE
+ n.商CO = s.商CO ;
+
+ 
+create view
+
+
+select sum(売上),avd

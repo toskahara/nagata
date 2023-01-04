@@ -1,0 +1,23 @@
+create database ed107 DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+create table 入力データ (
+CO int(3), 
+基準価格 int(16), 
+手数料率 FLOAT
+) 
+default charset=utf8;
+
+
+create table 入力データ2(
+CO int(3), 
+基準価格 int(16), 
+手数料率 FLOAT
+) 
+default charset=utf8;
+
+
+create table 日当テーブル (
+区分 int , 
+日当 int(8)
+) 
+default charset=utf8;

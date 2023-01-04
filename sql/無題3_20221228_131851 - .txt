@@ -1,0 +1,67 @@
+https://www.mysql.com/jp/products/connector/
+
+
+1: Action 11:21:06: INSTALL. 
+1: 1: MySQL Connector/ODBC 8.0 2: {74861C33-82F5-4A05-A62F-0DE127F5FCDC} 
+1: Action 11:21:06: FindRelatedProducts. Searching for related applications
+1: Action 11:21:06: AppSearch. Searching for installed applications
+1: Action 11:21:06: DwordToNumber. 
+1: Action 11:21:06: LaunchConditions. Evaluating launch conditions
+1: Action 11:21:06: ValidateProductID. 
+1: Action 11:21:06: CostInitialize. Computing space requirements
+1: Action 11:21:06: FileCost. Computing space requirements
+1: Action 11:21:06: CostFinalize. Computing space requirements
+1: Action 11:21:06: InstallValidate. Validating install
+1: Action 11:21:06: SetARPINSTALLLOCATION. 
+1: Action 11:21:06: SetARPREADME. 
+1: Action 11:21:06: InstallInitialize. 
+1: Action 11:21:06: RemoveExistingProducts. Removing applications
+1: Action 11:21:06: ProcessComponents. Updating component registration
+1: Action 11:21:06: GenerateScript. Generating script operations for action:
+1: Updating component registration
+1: Action 11:21:06: UnpublishFeatures. Unpublishing product features
+1: Action 11:21:06: RemoveODBC. Removing ODBC components
+1: Action 11:21:06: RemoveRegistryValues. Removing system registry values
+1: Action 11:21:06: RemoveFiles. Removing files
+1: Action 11:21:06: InstallFiles. Copying new files
+1: File: Copying new files,  Directory: ,  Size: 
+1: Action 11:21:06: WriteRegistryValues. Writing system registry values
+1: Key: Writing system registry values, Name: , Value: 
+1: Action 11:21:06: InstallODBC. Installing ODBC components
+1: Action 11:21:06: RegisterUser. Registering user
+1: Action 11:21:06: RegisterProduct. Registering product
+1: Registering product
+1: Action 11:21:06: PublishFeatures. Publishing product features
+1: Feature: Publishing product features
+1: Action 11:21:06: PublishProduct. Publishing product information
+1: Action 11:21:06: InstallFinalize. 
+1: Action 11:21:06: ProcessComponents. Updating component registration
+1: Action 11:21:06: RemoveODBC. Removing ODBC components
+1: Action 11:21:06: InstallFiles. Copying new files
+1: File: authentication_fido_client.dll,  Directory: C:\Program Files\MySQL\Connector ODBC 8.0\plugin\,  Size: 41624
+1: File: authentication_kerberos_client.dll,  Directory: C:\Program Files\MySQL\Connector ODBC 8.0\plugin\,  Size: 6248608
+1: File: authentication_ldap_sasl_client.dll,  Directory: C:\Program Files\MySQL\Connector ODBC 8.0\plugin\,  Size: 53920
+1: File: authentication_oci_client.dll,  Directory: C:\Program Files\MySQL\Connector ODBC 8.0\plugin\,  Size: 117392
+1: File: ChangeLog.txt,  Directory: C:\Program Files\MySQL\Connector ODBC 8.0\,  Size: 127
+1: File: INFO_BIN,  Directory: C:\Program Files\MySQL\Connector ODBC 8.0\,  Size: 299
+1: File: INFO_SRC,  Directory: C:\Program Files\MySQL\Connector ODBC 8.0\,  Size: 211
+1: File: myodbc-installer.exe,  Directory: C:\Program Files\MySQL\Connector ODBC 8.0\,  Size: 7636480
+1: File: libcrypto-1_1-x64.dll,  Directory: C:\Program Files\MySQL\Connector ODBC 8.0\,  Size: 3447936
+1: File: libssl-1_1-x64.dll,  Directory: C:\Program Files\MySQL\Connector ODBC 8.0\,  Size: 699008
+1: File: LICENSE.txt,  Directory: C:\Program Files\MySQL\Connector ODBC 8.0\,  Size: 113067
+1: File: myodbc8a.dll,  Directory: C:\Program Files\MySQL\Connector ODBC 8.0\,  Size: 9403392
+1: File: myodbc8S.dll,  Directory: C:\Program Files\MySQL\Connector ODBC 8.0\,  Size: 7816192
+1: File: myodbc8w.dll,  Directory: C:\Program Files\MySQL\Connector ODBC 8.0\,  Size: 9408512
+1: File: README.txt,  Directory: C:\Program Files\MySQL\Connector ODBC 8.0\,  Size: 1374
+1: Action 11:21:07: WriteRegistryValues. Writing system registry values
+1: Key: \SOFTWARE\MySQL AB\MySQL Connector/ODBC 8.0, Name: Version, Value: 8.0.31
+1: Key: \SOFTWARE\MySQL AB\MySQL Connector/ODBC 8.0, Name: , Value: 
+1: Action 11:21:07: InstallODBC. Installing ODBC components
+1: Action 11:21:07: RegisterProduct. Registering product
+1: {74861C33-82F5-4A05-A62F-0DE127F5FCDC}
+1: Action 11:21:07: PublishFeatures. Publishing product features
+1: Feature: ODBC
+1: Action 11:21:07: PublishProduct. Publishing product information
+1: Action 11:21:07: RollbackCleanup. Removing backup files
+1: 1: MySQL Connector/ODBC 8.0 2: {74861C33-82F5-4A05-A62F-0DE127F5FCDC} 3: 1 
+1: The action 'Install' for product 'Connector/ODBC 8.0.31' completed successfully.

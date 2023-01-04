@@ -1,0 +1,35 @@
+create database ed109 DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+create table 入力データ (
+得CO int(3), 
+得意先名 int(16),
+売上数	int(10) 
+) 
+default charset=utf8;
+
+
+create table 商品テーブル(
+商CO int(3),
+商品名 int(16), 
+定価
+) 
+default charset=utf8;
+
+
+
+INSERT INTO 入力データ  values (101,"山田衣料", 12,  351);
+INSERT INTO 入力データ  values (102,"Aスタイル", 14, 408);
+INSERT INTO 入力データ  values (103,"西川", 11,  492);
+INSERT INTO 入力データ  values (104,"セレクトS", 12,  446);
+INSERT INTO 入力データ  values (105,"ヤング専科", 13, 364);
+INSERT INTO 入力データ  values (106,"洋服の井上", 13, 450);
+INSERT INTO 入力データ  values (107,"マキ洋品", 11, 329);
+INSERT INTO 入力データ  values (108,"おしゃれ堂", 14, 430);
+INSERT INTO 入力データ  values (109,"泉ショップ", 12, 307);
+
+INSERT INTO 商品テーブル  values (11,"E商品", 2950);
+INSERT INTO 商品テーブル  values (12,"F商品", 3400);
+INSERT INTO 商品テーブル  values (13,"G商品", 2350);
+INSERT INTO 商品テーブル  values (14,"H商品", 3200);
+
+SELECT 得CO, 得意先名  FROM 入力データ
