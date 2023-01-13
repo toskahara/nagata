@@ -16,7 +16,7 @@ public class Bcc extends JFrame implements ActionListener {
 	JButton clearButton = new JButton("リセット");
 	JButton OKButton = new JButton("OK");
 	
-	void TextFieldExample() {  // kahara
+	void TextFieldExample() {
 		getContentPane().setLayout(new FlowLayout());		
 		getContentPane().add(textField);
 		getContentPane().add(clearButton);
