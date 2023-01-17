@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+:root{
+	--test-color:#999;
+	--box01-color:cyan;
+	--box02-color:yellow;
+	--box03-color:pink;
+}
+
+.sec01{
+		display:false;
+}
+
+div{
+	box-sizing:border-box;
+	rext-align:center;
+	
+}
