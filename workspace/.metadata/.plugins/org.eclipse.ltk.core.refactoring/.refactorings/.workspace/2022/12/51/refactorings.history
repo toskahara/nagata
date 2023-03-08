@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="リソース &apos;01-01/src/snippet.py&apos; を削除" deleteContents="false" description="リソース &apos;01-01/src/snippet.py&apos; を削除" element1="/01-01/src/snippet.py" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1670908487353"/>&#x0A;<refactoring comment="リソース &apos;01-01/src/aa.java&apos; を削除" deleteContents="false" description="リソース &apos;01-01/src/aa.java&apos; を削除" element1="/01-01/src/aa.java" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1670908522089"/>
-</session>
